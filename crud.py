@@ -20,6 +20,7 @@ def main():
             st.subheader('Insert a record')
             name = st.text_input('Enter name')
             email= st.text_input('Enter email')
+            #for proper format of input data
             try:
                 if st.button('Insert'):
                     query='INSERT INTO users(name,email) VALUES(%s,%s)'
@@ -78,6 +79,7 @@ def main():
                 res=cur.fetchall()
                 for row in res:
                     st.write(row)
+
 
 
 if __name__ =='__main__' :
